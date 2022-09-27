@@ -39,6 +39,14 @@ public class CDIO_v1 {
             //Her sker selve spiller turen hvor der kastes to tegninger med tur metoden og de ligges sammen med spillerens nuværne points
             // Det tome print statement bruges til at lave en blank linje mellem spiller turen og det næste output.
 
+            if (kastsp1.getDie1Value() == 1 && kastsp1.getDie2Value() == 1) {
+                System.out.println("Du har slået to, 1'ere og mister alle dine point");
+                point1 = 0;
+            }
+            if (point1>=40){
+                break;
+            }
+
             System.out.println(spiller2 + " Tryk enter for at kaste tegningerne");
             Input.enter();
             // Input statemnt for at spillet ikke forsætter uden player input.
@@ -51,16 +59,21 @@ public class CDIO_v1 {
             System.out.println("du har nu: " + point2 + " point");
             System.out.println("");
             //Spiller2's tur forløber på sammen måde some spiller1 og så starter loopet forfra med spiller1's tur hvis ingen spiller har 40 eller flere point.
+
+            if (kastsp2.getDie1Value() == 1 && kastsp2.getDie2Value() == 1) {
+                System.out.println("Du har slået to, 1'ere og mister alle dine point");
+                point2 = 0;
+            }
         }
         if (point1 >= 40) {
             System.out.println(spiller1 + " har vundet!");
-            System.out.println("Scoren blev: " + spiller1 + " point og " + spiller2 + " point");
+            System.out.println("Scoren blev: " + point1 + " point til " + spiller1 + " og " + point2 + " point til " + spiller2);
             // Dette if statemnent checker om det er spiller 1 der har 40 eller over
             //Derefter printer den en string der siger at spilleren har vundet og printer points for begge spiller
 
         } else {
             System.out.println(spiller2 + " har vundet!");
-            System.out.println("Scoren blev: " + point1 + " point til " + spiller1 + " og " + point2 + " point til " + spiller2);
+            System.out.println("Scoren blev: " + point2 + " point til " + spiller2 + " og " + point1 + " point til " + spiller1);
             // Hvis spiller et ikke har vundet og vi er ude af while loopet må spiller 2 per definition være vinderen.
             //Printer sejrs besked og final point tally.
         }
