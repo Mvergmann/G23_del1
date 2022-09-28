@@ -96,7 +96,7 @@ public class CDIO_v1 {
             }
 
         }
-    }
+
     if (point1 >= 40) {
         System.out.println(spiller1 + " har vundet!");
         System.out.println("Scoren blev: " + point1 + " point til " + spiller1 + " og " + point2 + " point til " + spiller2);
@@ -111,4 +111,4 @@ public class CDIO_v1 {
     }
 }
 
-    }
+}
