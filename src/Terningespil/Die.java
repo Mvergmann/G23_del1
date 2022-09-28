@@ -3,7 +3,7 @@ package Terningespil;
 
 public class Die //Enkel (1) terning
 {
-    private final int MAX = 6; //sikrer at terningen ikke kan opnå en højere værdi end 6.
+    private final int MAX = 6; //Sikrer at terningen ikke kan opnå en højere værdi end 6.
 
     private int faceValue;
 
