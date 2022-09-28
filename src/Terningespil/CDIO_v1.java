@@ -36,8 +36,8 @@ public class CDIO_v1 {
             point1 += sum1;
             System.out.println("Du har nu: " + point1 + " point.");
             System.out.println("");
-            //Her sker selve spiller turen hvor der kastes to tegninger med tur metoden og de ligges sammen med spillerens nuværne points
-            // Det tome print statement bruges til at lave en blank linje mellem spiller turen og det næste output.
+            //Her sker selve spiller turen, hvor der kastes to tegninger med tur metoden og de ligges sammen med spillerens nuværende points
+            // Det tomme print statement bruges til at lave en blank linje mellem spiller turen og det næste output.
 
             if (kastsp1.getDie1Value() == 1 && kastsp1.getDie2Value() == 1) {
                 System.out.println("Du har slået to, 1'ere og mister alle dine point");
@@ -53,9 +53,9 @@ public class CDIO_v1 {
                 System.out.println(spiller1 + " slog 2 ens! Kast igen! ");
                 kastsp1.tur();
                 sum1 = kastsp1.sum;
-                System.out.println("du har slået " + kastsp1.getDie1Value() + " og " + kastsp1.getDie2Value());
+                System.out.println("Du har slået " + kastsp1.getDie1Value() + " og " + kastsp1.getDie2Value());
                 point1 += sum1;
-                System.out.println("du har nu: " + point1 + " point.");
+                System.out.println("Du har nu: " + point1 + " point.");
             if (point1>=40) {
                 break;
                 }
@@ -78,7 +78,7 @@ public class CDIO_v1 {
             if (kastsp2.getDie1Value() == 1 && kastsp2.getDie2Value() == 1) {
                 System.out.println("Du har slået to, 1'ere og mister alle dine points");
                 point2 = 0;
-
+            }
             if (point2>=40){
                     break;
                 }
@@ -86,9 +86,9 @@ public class CDIO_v1 {
                     System.out.println(spiller2 + " slog 2 ens! Kast igen! ");
                     kastsp2.tur();
                     sum2 = kastsp2.sum;
-                    System.out.println("du har slået " + kastsp2.getDie1Value() + " og " + kastsp2.getDie2Value());
+                    System.out.println("Du har slået " + kastsp2.getDie1Value() + " og " + kastsp2.getDie2Value());
                     point2 += sum2;
-                    System.out.println("du har nu: " + point2 + " point.");
+                    System.out.println("Du har nu: " + point2 + " point.");
 
             if (point2>=40){
                 break;
