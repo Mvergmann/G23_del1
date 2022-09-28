@@ -10,5 +10,11 @@ public class Input
         String s = sc.nextLine();
         return s;
     }
+    public static int antalslag()
+    {
+        Scanner antal = new Scanner(System.in);
+        int testantal = antal.nextInt();
+        return testantal;
+    }
 
 }
