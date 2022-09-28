@@ -4,19 +4,11 @@ import java.util.Scanner;
 
 public class Input
 {
-    public static String enter()
+    public static String enter() //Laver et scanner objekt og lader den vente på et input af typen nextLine fra keyboardet
     {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         return s;
     }
-
-    public static String name()
-    {
-        Scanner in = new Scanner(System.in);
-        String name = in.nextLine();
-        return name;
-    }
-
 
 }
