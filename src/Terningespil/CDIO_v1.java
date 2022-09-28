@@ -46,6 +46,21 @@ public class CDIO_v1 {
             if (point1>=40){
                 break;
             }
+            if (point1>=40){
+                break;
+            }
+            while (kastsp1.getDie1Value() == kastsp1.getDie2Value()) { //Loop der giver ekstra slag hvis du slår to ens
+                System.out.println(spiller1 + " slog 2 ens! Kast igen! ");
+                kastsp1.tur();
+                sum1 = kastsp1.sum;
+                System.out.println("du har slået " + kastsp1.getDie1Value() + " og " + kastsp1.getDie2Value());
+                point1 += sum1;
+                System.out.println("du har nu: " + point1 + " point.");
+            if (point1>=40) {
+                break;
+                }
+            }
+
 
             System.out.println(spiller2 + " Tryk enter for at kaste tegningerne");
             Input.enter();
@@ -63,20 +78,37 @@ public class CDIO_v1 {
             if (kastsp2.getDie1Value() == 1 && kastsp2.getDie2Value() == 1) {
                 System.out.println("Du har slået to, 1'ere og mister alle dine points");
                 point2 = 0;
-            }
-        }
-        if (point1 >= 40) {
-            System.out.println(spiller1 + " har vundet!");
-            System.out.println("Scoren blev: " + point1 + " point til " + spiller1 + " og " + point2 + " point til " + spiller2);
-            // Dette if statement checker om det er spiller 1 der har 40 eller over
-            // Derefter printer den en string der siger at spilleren har vundet og printer points for begge spiller
 
-        } else {
-            System.out.println(spiller2 + " har vundet!");
-            System.out.println("Scoren blev: " + point2 + " point til " + spiller2 + " og " + point1 + " point til " + spiller1);
-            // Hvis spiller et ikke har vundet og vi er ude af while loopet, må spiller 2 per definition være vinderen.
-            //Printer sejrs besked og endelig point optælling.
+            if (point2>=40){
+                    break;
+                }
+            while (kastsp2.getDie1Value() == kastsp2.getDie2Value()) { //Loop der giver ekstra slag hvis du slår to ens
+                    System.out.println(spiller2 + " slog 2 ens! Kast igen! ");
+                    kastsp2.tur();
+                    sum2 = kastsp2.sum;
+                    System.out.println("du har slået " + kastsp2.getDie1Value() + " og " + kastsp2.getDie2Value());
+                    point2 += sum2;
+                    System.out.println("du har nu: " + point2 + " point.");
+
+            if (point2>=40){
+                break;
+                }
+            }
+
         }
     }
+    if (point1 >= 40) {
+        System.out.println(spiller1 + " har vundet!");
+        System.out.println("Scoren blev: " + point1 + " point til " + spiller1 + " og " + point2 + " point til " + spiller2);
+        // Dette if statement checker om det er spiller 1 der har 40 eller over
+        // Derefter printer den en string der siger at spilleren har vundet og printer points for begge spiller
+
+    } else {
+        System.out.println(spiller2 + " har vundet!");
+        System.out.println("Scoren blev: " + point2 + " point til " + spiller2 + " og " + point1 + " point til " + spiller1);
+        // Hvis spiller et ikke har vundet og vi er ude af while loopet, må spiller 2 per definition være vinderen.
+        //Printer sejrs besked og endelig point optælling.
+    }
+}
 
     }
