@@ -43,10 +43,10 @@ public class CDIO_v1 {
                 System.out.println("Du har slået to, 1'ere og mister alle dine point");
                 point1 = 0;
             }
-            if (point1>=40){
+            if (point1 >= 40) {
                 break;
             }
-            if (point1>=40){
+            if (point1 >= 40) {
                 break;
             }
             while (kastsp1.getDie1Value() == kastsp1.getDie2Value()) { //Loop der giver ekstra slag hvis du slår to ens
@@ -56,8 +56,14 @@ public class CDIO_v1 {
                 System.out.println("Du har slået " + kastsp1.getDie1Value() + " og " + kastsp1.getDie2Value());
                 point1 += sum1;
                 System.out.println("Du har nu: " + point1 + " point.");
-            if (point1>=40) {
-                break;
+
+                if (kastsp1.getDie1Value() == 1 && kastsp1.getDie2Value() == 1) {
+                    System.out.println("Du har slået to, 1'ere og mister alle dine point");
+                    point1 = 0;
+                }
+
+                if (point1 >= 40) {
+                    break;
                 }
             }
 
@@ -79,23 +85,29 @@ public class CDIO_v1 {
                 System.out.println("Du har slået to, 1'ere og mister alle dine points");
                 point2 = 0;
             }
-            if (point2>=40){
+            if (point2 >= 40) {
+                break;
+            }
+            while (kastsp2.getDie1Value() == kastsp2.getDie2Value()) { //Loop der giver ekstra slag hvis du slår to ens
+                System.out.println(spiller2 + " slog 2 ens! Kast igen! ");
+                kastsp2.tur();
+                sum2 = kastsp2.sum;
+                System.out.println("Du har slået " + kastsp2.getDie1Value() + " og " + kastsp2.getDie2Value());
+                point2 += sum2;
+                System.out.println("Du har nu: " + point2 + " point.");
+
+                if (kastsp2.getDie1Value() == 1 && kastsp2.getDie2Value() == 1) {
+                    System.out.println("Du har slået to, 1'ere og mister alle dine points");
+                    point2 = 0;
+                }
+
+
+                if (point2 >= 40) {
                     break;
                 }
-            while (kastsp2.getDie1Value() == kastsp2.getDie2Value()) { //Loop der giver ekstra slag hvis du slår to ens
-                    System.out.println(spiller2 + " slog 2 ens! Kast igen! ");
-                    kastsp2.tur();
-                    sum2 = kastsp2.sum;
-                    System.out.println("Du har slået " + kastsp2.getDie1Value() + " og " + kastsp2.getDie2Value());
-                    point2 += sum2;
-                    System.out.println("Du har nu: " + point2 + " point.");
-
-            if (point2>=40){
-                break;
-                }
             }
-
         }
+
 
     if (point1 >= 40) {
         System.out.println(spiller1 + " har vundet!");
