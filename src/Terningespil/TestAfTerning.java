@@ -35,13 +35,13 @@ public class TestAfTerning {
             if (die1.getFaceValue() == die2.getFaceValue()) {
                 toens++;
             }
-
             if(die1.getFaceValue() + die2.getFaceValue()==2){
                 sum2++;
             }
             if(die1.getFaceValue() + die2.getFaceValue()==3){
                 sum3++;
-            }  if(die1.getFaceValue() + die2.getFaceValue()==4){
+            }
+            if(die1.getFaceValue() + die2.getFaceValue()==4){
                 sum4++;
             }
             if(die1.getFaceValue() + die2.getFaceValue()==5){
