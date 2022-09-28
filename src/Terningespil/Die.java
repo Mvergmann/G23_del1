@@ -1,9 +1,9 @@
 package Terningespil;
 
 
-public class Die //Enkelt terning
+public class Die //Enkel (1) terning
 {
-    private final int MAX = 6; //sikrer at terningen ikke kan opnå en højere værdi end 6.
+    private final int MAX = 6; //Sikrer at terningen ikke kan opnå en højere værdi end 6.
 
     private int faceValue;
 
@@ -12,13 +12,13 @@ public class Die //Enkelt terning
         faceValue = 1;
     }
 
-    public int roll() { //terninge slag af en værdi fra 1-6.
+    public int roll() { // Terningen kan nu slå en værdi fra 1 til 6.
         faceValue = (int)(Math.random() * MAX) + 1;
 
         return faceValue;
     }
 
-    //funktion til at sætte terningens værdi til noget bestemt
+    // Denne funktion gør således at man kan bestemme terningens værdi.
     public void setFaceValue(int value)
     {
         faceValue = value;
