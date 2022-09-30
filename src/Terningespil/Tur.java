@@ -6,7 +6,7 @@ public class Tur {
     int sum;
 
 
-    public int tur() {  //Funktion til at så med 2 terninger og få deres sum
+    public int tur() {  // Funktion til at slå med 2 terninger og dertil få deres samlede sum
         die1.roll();
         die2.roll();
         sum = die1.getFaceValue() + die2.getFaceValue();
@@ -16,14 +16,14 @@ public class Tur {
 
     }
 
-    public int getDie1Value() { //Henter værdien af første die
+    public int getDie1Value() { // Henter værdien af første die
 
 
         return die1.getFaceValue();
 
     }
 
-    public int getDie2Value() { //Henter værdien af anden die
+    public int getDie2Value() { // Henter værdien af anden die
         return die2.getFaceValue();
 
 
