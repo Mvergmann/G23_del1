@@ -27,7 +27,7 @@ public class CDIO_v1 {
 
             System.out.println(spiller1 + " Tryk enter for at kaste tegningerne");
             Input.enter();
-            // Dette har til formål at skabe breaks i spillet, for at spillet ikke bare køre fra start til slut, efter spillerne indtaster navn.
+            // Dette har til formål at skabe breaks i spillet, for at spillet ikke bare kører fra start til slut, efter spillerne indtaster navn.
 
             System.out.println(spiller1 + " Kaster terningerne");
             kastsp1.tur();
@@ -46,9 +46,7 @@ public class CDIO_v1 {
             if (point1 >= 40) {
                 break;
             }
-            if (point1 >= 40) {
-                break;
-            }
+
             while (kastsp1.getDie1Value() == kastsp1.getDie2Value()) { //Loop der giver ekstra slag hvis du slår to ens
                 System.out.println(spiller1 + " slog 2 ens! Kast igen! ");
                 kastsp1.tur();
@@ -101,10 +99,6 @@ public class CDIO_v1 {
                     point2 = 0;
                 }
 
-
-                if (point2 >= 40) {
-                    break;
-                }
             }
         }
 
