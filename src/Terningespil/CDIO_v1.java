@@ -13,7 +13,7 @@ public class CDIO_v1 {
         int point2 = 0;
         Tur kastsp1 = new Tur();
         Tur kastsp2 = new Tur();
-        // Her sættes spillernes point til 0 og tur metoden kaldes fra Tur classen. Denne metode kaster to tegninger og returnere summen.
+        // Her sættes spillernes point til 0 og "tur" metoden kaldes fra Tur classen. Denne metode kaster to tegninger og returnere summen.
 
 
         System.out.println("Skriv navnet på spiller 1: ");
@@ -36,7 +36,7 @@ public class CDIO_v1 {
             point1 += sum1;
             System.out.println("Du har nu: " + point1 + " point.");
             System.out.println("");
-            //Her sker selve spiller turen, hvor der kastes to tegninger med tur metoden og de ligges sammen med spillerens nuværende points
+            // Her sker selve spiller-turen, hvor der kastes to tegninger med "tur" metoden og de ligges sammen med spillerens nuværende points
             // Det tomme print statement bruges til at lave en blank linje mellem spiller turen og det næste output.
 
             if (kastsp1.getDie1Value() == 1 && kastsp1.getDie2Value() == 1) {
@@ -112,13 +112,13 @@ public class CDIO_v1 {
     if (point1 >= 40) {
         System.out.println(spiller1 + " har vundet!");
         System.out.println("Scoren blev: " + point1 + " point til " + spiller1 + " og " + point2 + " point til " + spiller2);
-        // Dette if statement checker om det er spiller 1 der har 40 eller over
+        // Dette "if" statement checker om det er spiller 1 der har 40 eller over
         // Derefter printer den en string der siger at spilleren har vundet og printer points for begge spiller
 
     } else {
         System.out.println(spiller2 + " har vundet!");
         System.out.println("Scoren blev: " + point2 + " point til " + spiller2 + " og " + point1 + " point til " + spiller1);
-        // Hvis spiller et ikke har vundet og vi er ude af while loopet, må spiller 2 per definition være vinderen.
+        // Hvis spiller 1 ikke har vundet og vi er ude af while loopet, må spiller 2 per definition være vinderen.
         //Printer sejrs besked og endelig point optælling.
     }
 }
